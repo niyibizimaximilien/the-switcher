@@ -28,13 +28,25 @@
       padding: 2rem;
     }
 
-    .preview iframe {
+    .preview-wrapper {
       width: 80%;
       height: 400px;
+      margin: 1rem auto;
       border: 2px solid #ccc;
       border-radius: 10px;
-      margin: 1rem 0;
+      overflow: hidden;
       background: white;
+      position: relative;
+    }
+
+    .preview-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      transform: scale(0.8); /* minimize zoom */
+      transform-origin: top left;
+      width: 125%; /* compensate scaling */
+      height: 125%;
     }
 
     .file-list {
@@ -87,13 +99,15 @@
     <!-- Preview Section -->
     <section class="preview">
       <h2>Preview</h2>
-      <iframe id="previewFrame" src="Airpods Animation/index.html" title="Project Preview"></iframe>
+      <div class="preview-wrapper">
+        <iframe id="previewFrame" src="Airpods Animation/index.html" title="Project Preview"></iframe>
+      </div>
 
       <!-- File Switcher -->
       <div class="file-list">
-        <button onclick="loadFile('home.html')">Home</button>
-        <button onclick="loadFile('about.html')">About</button>
-        <button onclick="loadFile('contact.html')">Contact</button>
+        <button onclick="loadFile('Airpods Animation/home.html')">Home</button>
+        <button onclick="loadFile('Airpods Animation/about.html')">About</button>
+        <button onclick="loadFile('Airpods Animation/contact.html')">Contact</button>
       </div>
     </section>
 
