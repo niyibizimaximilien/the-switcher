@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Page</title>
+  <title>Project Preview & Download</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -34,6 +34,26 @@
       border: 2px solid #ccc;
       border-radius: 10px;
       margin: 1rem 0;
+      background: white;
+    }
+
+    .file-list {
+      margin: 1rem 0;
+    }
+
+    .file-list button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #4f83d1;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .file-list button:hover {
+      background: #365a91;
     }
 
     .download .btn {
@@ -67,7 +87,14 @@
     <!-- Preview Section -->
     <section class="preview">
       <h2>Preview</h2>
-      <iframe src="https://example.com" title="Project Preview"></iframe>
+      <iframe id="previewFrame" src="home.html" title="Project Preview"></iframe>
+
+      <!-- File Switcher -->
+      <div class="file-list">
+        <button onclick="loadFile('home.html')">Home</button>
+        <button onclick="loadFile('about.html')">About</button>
+        <button onclick="loadFile('contact.html')">Contact</button>
+      </div>
     </section>
 
     <!-- Download Section -->
@@ -80,5 +107,11 @@
   <footer>
     <p>© 2025 My Website</p>
   </footer>
+
+  <script>
+    function loadFile(file) {
+      document.getElementById("previewFrame").src = file;
+    }
+  </script>
 </body>
 </html>
