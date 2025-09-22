@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f8fa;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background: #4f83d1;
+      color: white;
+      padding: 1rem;
+    }
+
+    h1, h2 {
+      margin: 0.5rem 0;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .preview iframe {
+      width: 80%;
+      height: 400px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+
+    .download .btn {
+      display: inline-block;
+      background: #4f83d1;
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .download .btn:hover {
+      background: #365a91;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Project Preview & Download</h1>
+  </header>
+
+  <main>
+    <!-- Preview Section -->
+    <section class="preview">
+      <h2>Preview</h2>
+      <iframe src="https://example.com" title="Project Preview"></iframe>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download">
+      <h2>Get the Project</h2>
+      <a href="files/project.zip" class="btn" download>Download</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+</body>
+</html>
